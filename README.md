@@ -36,3 +36,9 @@ Curso de Seguridad en JEE
 	- http://docs.oracle.com/javaee/6/tutorial/doc/gijrp.html
 - Apache Tomcat 7.0 - Realm Configuration HOWTO
 	- http://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html
+- XML Encryption
+	- http://es.wikipedia.org/wiki/XML_Encryption
+- XML Signature
+	- http://es.wikipedia.org/wiki/Firma_XML
+- Apache Santuario (Java lib forX ML Signature & XML Encryption)
+	- http://santuario.apache.org/
