@@ -28,5 +28,9 @@ Curso de Seguridad en JEE
 
 - Curso de Criptografía en Java
 	- https://github.com/camposer/curso_crypto
+- Curso de Pruebas
+	- https://github.com/camposer/curso_testing
+- Seguridad Web
+	- http://es.slideshare.net/camposer/seguridad-web-40313501
 - The Java EE 6 Tutorial
 	- http://docs.oracle.com/javaee/6/tutorial/doc/gijrp.html
