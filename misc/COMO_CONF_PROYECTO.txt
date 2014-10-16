@@ -1,0 +1,15 @@
+1. Descargar Apache Tomcat 8 (apache-tomcat-8.X.zip)
+2. Descomprimir
+3. Agregar Servidor al Workspace de Eclipse
+	- En la vista Servers -> Añadir servidor -> Apache Tomcat 8 
+	- Indicar la ruta donde ha descomprimido el Tomcat
+4. Verificar que el proyecto tiene la referencia del Runtime de Tomcat
+	- Propiedades del proyecto -> Java Build Path
+	- Si no aparece la referencia al Runtime de Apache Tomcat
+		- Add Library -> Server Runtime -> Apache Tomcat 8
+5. Agregar el proyecto al Servidor
+	- En la vista de Servers verificar que el proyecto se desplegará en el servidor
+		- Clic derecho sobre el servidor: Add and remove (añadir el servidor)
+	- Iniciar el servidor
+
+NOTA: DEBE ESTAR ESCUCHANDO LA BD DERBY (DERBY_HOME\bin\startNetworkServer.bat)
