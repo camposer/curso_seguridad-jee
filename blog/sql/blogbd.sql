@@ -5,15 +5,10 @@ CREATE TABLE usuario (
 	id INT NOT NULL GENERATED ALWAYS 
 		AS IDENTITY (START WITH 1, INCREMENT BY 1),
 	nombre VARCHAR(20),
-	clave VARCHAR(20),
+	clave VARCHAR(50),
 	rol VARCHAR(20),
 	PRIMARY KEY (id)
 );
-
-INSERT INTO usuario(nombre, clave, rol) 
-VALUES('admin', 'admin', 'Administrador');
-INSERT INTO usuario(nombre, clave, rol) 
-VALUES('usuario', 'usuario', 'Ordinario');
 
 CREATE TABLE articulo (
 	id INT NOT NULL GENERATED ALWAYS 
