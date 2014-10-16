@@ -50,6 +50,6 @@
 			</tr>
 		</table>
 	</form>
-	<a href="usuario/">Registrar usuario</a>
+	<a href="<%= getServletContext().getContextPath() %>/usuario/">Registrar usuario</a>
 </body>
 </html>
