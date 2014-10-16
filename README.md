@@ -28,3 +28,19 @@ Curso de Seguridad en JEE
 
 - Curso de Criptografía en Java
 	- https://github.com/camposer/curso_crypto
+- Curso de Pruebas
+	- https://github.com/camposer/curso_testing
+- Seguridad Web
+	- http://es.slideshare.net/camposer/seguridad-web-40313501
+- The Java EE 6 Tutorial
+	- http://docs.oracle.com/javaee/6/tutorial/doc/gijrp.html
+- Apache Tomcat 7.0 - Realm Configuration HOWTO
+	- http://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html
+- XML Encryption
+	- http://es.wikipedia.org/wiki/XML_Encryption
+- XML Signature
+	- http://es.wikipedia.org/wiki/Firma_XML
+- Apache Santuario (Java lib forX ML Signature & XML Encryption)
+	- http://santuario.apache.org/
+- JASS Reference Guide
+	- http://docs.oracle.com/javase/7/docs/technotes/guides/security/jaas/JAASRefGuide.html
