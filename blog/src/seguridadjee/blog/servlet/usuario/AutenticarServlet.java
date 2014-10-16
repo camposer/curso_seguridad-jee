@@ -11,44 +11,46 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import seguridadjee.blog.model.Usuario;
-import seguridadjee.blog.model.Usuario.Rol;
 import seguridadjee.blog.service.UsuarioService;
 import seguridadjee.blog.service.UsuarioServiceFactory;
 
-@WebServlet("/usuario/registrar")
-public class RegistrarServlet extends HttpServlet {
+@WebServlet("/usuario/autenticar")
+public class AutenticarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<String> errores = new ArrayList<String>();
 		UsuarioService usuarioService = UsuarioServiceFactory.createUsuarioService();
+		List<String> errores = new ArrayList<String>();
 		
 		String nombre = request.getParameter("nombre");
 		String clave = request.getParameter("clave");
-		String rol = request.getParameter("rol");
 		
+		// TODO Validar la robustez de la contraseña!!!
 		if (nombre == null || nombre.trim().equals(""))
 			errores.add("Nombre inválido");
 		if (clave == null || clave.trim().equals(""))
-			errores.add("Clave inválida");
-		if (rol == null || rol.trim().equals(""))
-			errores.add("Rol inválido");
+			errores.add("Nombre inválido");
 		
-		if (errores.size() == 0) { // Agregando usuario
+		if (errores.size() == 0) {
 			try {
-				usuarioService.agregarUsuario(new Usuario(nombre, clave, Rol.valueOf(rol)));
+				Usuario u = usuarioService.autenticar(nombre, clave);
+				
+				if (u == null) 
+					errores.add("Usuario o contraseña incorrecta");
+				else
+					request.getSession().setAttribute("usuario", u);
 			} catch (Exception e) {
 				e.printStackTrace();
-				errores.add("Error al agregar usuario en BD");
+				errores.add("Error de BD al autenticar");
 			}
 		}
 		
 		if (errores.size() > 0) {
 			request.setAttribute("errores", errores);
-			getServletContext().getRequestDispatcher("/usuario.jsp")
+			getServletContext().getRequestDispatcher("/index.jsp")
 				.forward(request, response);
 		} else {
-			response.sendRedirect("../index");
+			response.sendRedirect(getServletContext().getContextPath() + "/articulo/");
 		}
 	}
 

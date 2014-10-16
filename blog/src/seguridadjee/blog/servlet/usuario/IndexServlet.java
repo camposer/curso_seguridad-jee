@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import seguridadjee.blog.model.Usuario.Rol;
 
 @WebServlet("/usuario/")
-public class RegistroServlet extends HttpServlet {
+public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

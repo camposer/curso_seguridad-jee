@@ -6,18 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Registro de usuario</title>
-	<style>
-		.tablaFormulario {
-			margin-left: auto;
-			margin-right: auto; 
-		}
-		.errores {
-			background-color: red;
-		}
-		h1 {
-			text-align: center;
-		}
-	</style>
+	<link type="text/css" rel="stylesheet" href="../css/comun.css">
 	<script src="../js/crypto-js/rollups/sha1.js"></script>
 	<script>
 		var registrar = function() {

@@ -19,9 +19,23 @@ class UsuarioServiceImpl implements UsuarioService {
 		}
 	}
 	
+	@Override
 	public Usuario agregarUsuario(Usuario u) {
 		try {
 			u = usuarioDao.agregar(u);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new AppException(e);
+		}
+		
+		return u;
+	}
+
+	@Override
+	public Usuario autenticar(String nombre, String clave) {
+		Usuario u = null;
+		try {
+			u = usuarioDao.autenticar(nombre, clave);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new AppException(e);
