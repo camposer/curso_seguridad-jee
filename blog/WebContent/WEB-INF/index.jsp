@@ -50,5 +50,6 @@
 			</tr>
 		</table>
 	</form>
+	<a href="usuario/">Registrar usuario</a>
 </body>
 </html>

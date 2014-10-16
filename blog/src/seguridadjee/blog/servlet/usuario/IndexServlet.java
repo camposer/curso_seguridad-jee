@@ -24,7 +24,7 @@ public class IndexServlet extends HttpServlet {
 		
 		request.setAttribute("roles", roles);
 		
-		getServletContext().getRequestDispatcher("/usuario.jsp")
+		getServletContext().getRequestDispatcher("/WEB-INF/usuario.jsp")
 			.forward(request, response);
 	}
 

@@ -42,5 +42,7 @@ Curso de Seguridad en JEE
 	- http://es.wikipedia.org/wiki/Firma_XML
 - Apache Santuario (Java lib forX ML Signature & XML Encryption)
 	- http://santuario.apache.org/
-- JASS Reference Guide
+- JAAS Reference Guide
 	- http://docs.oracle.com/javase/7/docs/technotes/guides/security/jaas/JAASRefGuide.html
+- Qué tan segura es mi contraseña
+	- https://howsecureismypassword.net/

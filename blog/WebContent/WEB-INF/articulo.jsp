@@ -7,6 +7,6 @@
 	<title>Insert title here</title>
 </head>
 <body>
-	Lista de artículos....
+	Lista de artículos....<a href="../sesion/cerrar">Cerrar sesión</a>
 </body>
 </html>

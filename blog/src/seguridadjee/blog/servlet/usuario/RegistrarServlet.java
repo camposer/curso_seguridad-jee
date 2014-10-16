@@ -45,7 +45,7 @@ public class RegistrarServlet extends HttpServlet {
 		
 		if (errores.size() > 0) {
 			request.setAttribute("errores", errores);
-			getServletContext().getRequestDispatcher("/usuario.jsp")
+			getServletContext().getRequestDispatcher("/WEB-INF/usuario.jsp")
 				.forward(request, response);
 		} else {
 			response.sendRedirect("../index");

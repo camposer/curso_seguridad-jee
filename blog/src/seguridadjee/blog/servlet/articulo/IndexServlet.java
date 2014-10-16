@@ -22,7 +22,7 @@ public class IndexServlet extends HttpServlet {
 		Usuario u = (Usuario)request.getSession().getAttribute("usuario");
 		
 		if (u != null && u.getRol().equals(Rol.ADMIN)) {
-			getServletContext().getRequestDispatcher("/articulos.jsp")
+			getServletContext().getRequestDispatcher("/WEB-INF/articulo.jsp")
 				.forward(request, response);
 		} else {
 			throw new ServletException("Usuario inválido");

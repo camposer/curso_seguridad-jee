@@ -47,7 +47,7 @@ public class AutenticarServlet extends HttpServlet {
 		
 		if (errores.size() > 0) {
 			request.setAttribute("errores", errores);
-			getServletContext().getRequestDispatcher("/index.jsp")
+			getServletContext().getRequestDispatcher("/WEB-INF/index.jsp")
 				.forward(request, response);
 		} else {
 			response.sendRedirect(getServletContext().getContextPath() + "/articulo/");
