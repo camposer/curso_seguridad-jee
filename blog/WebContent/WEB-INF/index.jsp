@@ -31,7 +31,7 @@
 		</c:forEach>
 	</div>
 	<form name="formUsuario" action="usuario/autenticar" method="post">
-		<table class="tablaFormulario">
+		<table class="tablaFormulario"> 
 			<tr>
 				<td>Nombre:</td>
 				<td><input type="text" name="nombre" id="nombre"/></td>

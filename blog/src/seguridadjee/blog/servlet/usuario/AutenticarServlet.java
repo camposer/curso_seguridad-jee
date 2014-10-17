@@ -1,6 +1,7 @@
 package seguridadjee.blog.servlet.usuario;
 
 import java.io.IOException;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,8 +38,12 @@ public class AutenticarServlet extends HttpServlet {
 				
 				if (u == null) 
 					errores.add("Usuario o contraseña incorrecta");
-				else
+				else { // Usuario autenticado correctamente!!!
 					request.getSession().setAttribute("usuario", u);
+					
+					request.authenticate(response);
+					// TODO: Add role
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 				errores.add("Error de BD al autenticar");

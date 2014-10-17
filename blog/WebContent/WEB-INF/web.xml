@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
-  <display-name>blog</display-name>
-  <welcome-file-list>
-    <welcome-file>index</welcome-file>
-  </welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>blog</display-name>
+	<welcome-file-list>
+		<welcome-file>index</welcome-file>
+	</welcome-file-list>
+
+	<!-- Configuraciones de Autorización -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>mod_articulo</web-resource-name>
+			<description>Módulo de Gestión de artículos</description>
+			<url-pattern>/articulo/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>ADMIN</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<!-- Roles -->
+	<security-role>
+		<description>Rol de Administrador</description>
+		<role-name>ADMIN</role-name>
+	</security-role>
+	<security-role>
+		<description>Rol de Usuario Ordinario</description>
+		<role-name>ORD</role-name>
+	</security-role>
 </web-app>
