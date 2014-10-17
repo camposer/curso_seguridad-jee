@@ -34,7 +34,7 @@ Curso de Seguridad en JEE
 	- https://github.com/camposer/curso_tomcat
 - Seguridad Web
 	- http://es.slideshare.net/camposer/seguridad-web-40313501
-- The Java EE 6 Tutorial
+- The Java EE 6 Tutorial - Part VII. Security
 	- http://docs.oracle.com/javaee/6/tutorial/doc/gijrp.html
 - Apache Tomcat 7.0 - Realm Configuration HOWTO
 	- http://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html
