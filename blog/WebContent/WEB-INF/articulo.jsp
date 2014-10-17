@@ -8,5 +8,10 @@
 </head>
 <body>
 	Lista de artículos....<a href="../sesion/cerrar">Cerrar sesión</a>
+	<% if (request.isUserInRole("ADMIN")) { %>
+		<div>
+			Artículos sólo del admin!!!
+		</div>
+	<% } %>
 </body>
 </html>

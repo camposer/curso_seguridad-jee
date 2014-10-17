@@ -11,6 +11,18 @@
 	<!-- Configuraciones de Autorización -->
 	<security-constraint>
 		<web-resource-collection>
+			<web-resource-name>mod_index</web-resource-name>
+			<description>Inicio</description>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
 			<web-resource-name>mod_articulo</web-resource-name>
 			<description>Módulo de Gestión de artículos</description>
 			<url-pattern>/articulo/*</url-pattern>
@@ -18,6 +30,7 @@
 		
 		<auth-constraint>
 			<role-name>ADMIN</role-name>
+			<role-name>ORD</role-name>
 		</auth-constraint>
 		
 		<user-data-constraint>
@@ -29,6 +42,7 @@
 	<login-config>
 		<auth-method>FORM</auth-method>
 		<realm-name>UserDatabase</realm-name>
+		<!-- realm-name>UserJdbcDatabase</realm-name-->
 		<form-login-config>
 			<form-login-page>/WEB-INF/login.jsp</form-login-page>
 			<form-error-page>/WEB-INF/error.jsp</form-error-page>
