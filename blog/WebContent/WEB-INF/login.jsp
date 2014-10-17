@@ -15,7 +15,25 @@
 			${e}<br/>
 		</c:forEach>
 	</div>
-	<a href="<%= getServletContext().getContextPath() %>/usuario/">Registrar usuario</a><br/>
-	<a href="<%= getServletContext().getContextPath() %>/articulo/">Gestionar artículos</a>
+	<form name="formUsuario" action="j_security_check" method="post">
+		<table class="tablaFormulario"> 
+			<tr>
+				<td>Nombre:</td>
+				<td><input type="text" name="j_username"/></td>
+			</tr>		
+			<tr>
+				<td>Clave:</td>
+				<td>
+					<input type="password" name="j_password"/>
+				</td>
+			</tr>		
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Entrar"/>
+					<input type="button" onclick="window.location.href='../'"/>
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

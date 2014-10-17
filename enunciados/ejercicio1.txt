@@ -1,0 +1,2 @@
+1. Refactorizar el proyecto blog para que la autenticación y autorización se lleve a cabo totalmente de forma declarativa. Inicialmente de tipo Básica. Luego, de tipo Form.
+

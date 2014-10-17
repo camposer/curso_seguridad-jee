@@ -15,14 +15,26 @@
 			<description>Módulo de Gestión de artículos</description>
 			<url-pattern>/articulo/*</url-pattern>
 		</web-resource-collection>
+		
 		<auth-constraint>
 			<role-name>ADMIN</role-name>
 		</auth-constraint>
+		
 		<user-data-constraint>
 			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
 
+	<!-- Autenticación -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>UserDatabase</realm-name>
+		<form-login-config>
+			<form-login-page>/WEB-INF/login.jsp</form-login-page>
+			<form-error-page>/WEB-INF/error.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
 	<!-- Roles -->
 	<security-role>
 		<description>Rol de Administrador</description>
